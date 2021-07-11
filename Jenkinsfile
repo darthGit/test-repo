@@ -1,7 +1,5 @@
 pipeline{
-    agent{
-        any
-    }
+    agent any
 
     options {
         buildDiscardes logRotator(artifactDaysToKeepStr: '', artfactNumToKeepStr: '', daysToKeepSrt: '', numToKeepStr: '5')
