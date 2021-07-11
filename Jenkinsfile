@@ -2,11 +2,11 @@ pipeline{
     agent any
 
     options {
-        buildDiscardes logRotator(artifactDaysToKeepStr: '', artfactNumToKeepStr: '', daysToKeepSrt: '', numToKeepStr: '5')
+        buildDiscarder logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '', daysToKeepStr: '', numToKeepStr: '5')
     }
 
     parameters {
-        srting defaultValue: 'this is default value', description: 'Default value for lesson namber', name: 'number', trim: true
+        string defaultValue: 'this is default value', description: 'Default value for lesson namber', name: 'number', trim: true
         booleanParam 'run'
     }
 
